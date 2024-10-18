@@ -1,7 +1,7 @@
 import os
 import yt_dlp
 
-def download_youtube_audio_as_mp3(youtube_url, output_dir="downloads"):
+def download_youtube_audio_as_wav(youtube_url, output_dir="downloads"):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -24,5 +24,11 @@ def download_youtube_audio_as_mp3(youtube_url, output_dir="downloads"):
         print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    youtube_link = input("Enter YouTube link: ")
-    download_youtube_audio_as_mp3(youtube_link)
+    while True:
+        youtube_link = input("Enter YouTube link (or type 'exit' to quit): ")
+        
+        if youtube_link.lower() == 'exit':
+            print("Exiting the program.")
+            break
+            
+        download_youtube_audio_as_wav(youtube_link)
