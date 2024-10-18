@@ -1,3 +1,6 @@
+# To start, use pip install yt-dlp or pip install -r requirements.txt in the terminal
+# if u do not have pip, look up how to install it
+
 import os
 import yt_dlp
 
